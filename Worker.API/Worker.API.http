@@ -1,0 +1,16 @@
+@Worker.API_HostAddress = http://localhost:5155
+
+GET {{Worker.API_HostAddress}}/jobs/
+Accept: application/json
+
+###
+
+GET {{Worker.API_HostAddress}}/queue/
+Accept: application/json
+
+###
+
+GET {{Worker.API_HostAddress}}/scheduler/
+Accept: application/json
+
+###
