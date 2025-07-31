@@ -173,5 +173,9 @@ public abstract class Repository<TEntity>(WorkerDbContext context) : IRepository
 
             return await Task.FromResult(EntityRemoved(findResult.Result));
         }
+        catch (Exception ex)
+        {
+            return await Task.FromResult(Exception<TEntity>(ex));
+        }
     }
 }
