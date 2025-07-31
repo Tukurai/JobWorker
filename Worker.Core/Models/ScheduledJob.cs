@@ -1,8 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Worker.Core.Interfaces;
 
 namespace Worker.Core.Models;
 
-public class ScheduledJob() : Job()
+public class ScheduledJob : Job
 {
     [Required]
     public string CronExpression { get; set; } = null!;
@@ -12,6 +13,4 @@ public class ScheduledJob() : Job()
     public DateTime? NextRunAt { get; set; }
 
     public bool IsEnabled { get; set; } = true;
-
-    public DateTime? UpdatedAt { get; set; }
 }

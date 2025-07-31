@@ -1,16 +1,12 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Worker.Core.Interfaces;
 
 namespace Worker.Core.Models;
 
-public class Job()
+public class Job : DbEntity
 {
-    [Key]
-    public Guid Id { get; set; }
-
     [Required]
     public string Name { get; set; } = null!;
-
-    public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
     public string? Payload { get; set; }  // JSON or serialized parameters  
 }

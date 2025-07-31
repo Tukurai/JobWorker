@@ -2,7 +2,7 @@
 
 namespace Worker.Core.Models;
 
-public class QueueJob() : Job()
+public class QueueJob : Job
 {
     [Required]
     public JobStatus Status { get; set; } = JobStatus.Pending;

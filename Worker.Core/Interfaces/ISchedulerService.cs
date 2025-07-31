@@ -1,5 +1,5 @@
 ﻿namespace Worker.Core.Interfaces;
 
-public class ISchedulerService()
+public interface ISchedulerService
 {
 }

@@ -1,5 +1,8 @@
-﻿namespace Worker.Infrastructure.Repositories;
+﻿using Worker.Core.Models;
+using Worker.Infrastructure.Data;
 
-class QueueJobRepository()
-{
-}
+namespace Worker.Infrastructure.Repositories;
+
+public interface IQueueJobRepository : IRepository<QueueJob> { }
+
+public class QueueJobRepository(WorkerDbContext context) : Repository<QueueJob>(context), IQueueJobRepository { }
